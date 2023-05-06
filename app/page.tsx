@@ -11,5 +11,3 @@ const Home = async () => {
 };
 
 export default Home;
-
-// Kd4bjgmlXI8DkAWQ
