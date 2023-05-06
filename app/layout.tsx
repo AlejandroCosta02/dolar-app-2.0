@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`{raleway.className}`}>
+      <body className={`${raleway.className}`}>
         <Navbar />
         <div className="min-h-screen flex flex-col">
           <main className="flx-grow">{children}</main>
