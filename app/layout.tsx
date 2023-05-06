@@ -42,6 +42,7 @@ export default function RootLayout({
           noModule
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
         ></script>
+        {/* END SCRIPT */}
       </body>
     </html>
   );
