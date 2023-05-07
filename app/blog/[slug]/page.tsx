@@ -41,10 +41,20 @@ function formatText(rawText: string | undefined) {
   // Replace newline characters with <br> tags
   let formattedText = rawText.replace(/\n/g, "<br>");
 
-  // Wrap URLs with <a> tags and use last word before URL as link text
+  // Wrap link text with <a> tags
   formattedText = formattedText.replace(
-    /(\S+)\s*(https?:\/\/[^\s]+)/g,
-    '<a href="$2" target="_blank" style="color: blue;">$1</a>$2'
+    /(\[.*?\])?\s*(https?:\/\/[^\s]+)/g,
+    function (match, linkText, url) {
+      if (linkText) {
+        // Remove the square brackets from the link text
+        linkText = linkText.slice(1, -1);
+      } else {
+        // Use the URL as the link text
+        linkText = url;
+      }
+      // Return the formatted hyperlink
+      return `<a href="${url}" target="_blank" style="color: blue;">${linkText}</a>`;
+    }
   );
 
   // Apply bold formatting to text within double underscores (__)
@@ -52,6 +62,7 @@ function formatText(rawText: string | undefined) {
 
   return formattedText;
 }
+
 async function Post({ params }: { params: { slug: string } }) {
   const post = await fetchEachPost(params.slug);
   return (
