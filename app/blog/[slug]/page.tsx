@@ -80,6 +80,7 @@ async function Post({ params }: { params: { slug: string } }) {
             className="mb-4"
             dangerouslySetInnerHTML={{ __html: formatText(post?.body) }}
           ></p>
+          <p>fecha</p>
         </div>
       </div>
     </>
