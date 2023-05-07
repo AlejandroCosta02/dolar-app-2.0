@@ -85,7 +85,7 @@ async function Post({ params }: { params: { slug: string } }) {
           />
         </div>
         <div className="w-full lg:w-2/3 p-4">
-          <h2 className="text-2xl font-bold mb-4">{post?.title}!!!</h2>
+          <h2 className="text-2xl font-bold mb-4">{post?.title}!?</h2>
           <p
             className="mb-4"
             dangerouslySetInnerHTML={{ __html: formatText(post?.body) }}
