@@ -41,10 +41,16 @@ function formatText(rawText: string | undefined) {
   // Replace newline characters with <br> tags
   let formattedText = rawText.replace(/\n/g, "<br>");
 
-  // Wrap URLs with <a> tags
+  // Wrap URLs with <a> tags and custom link text
   formattedText = formattedText.replace(
-    /(https?:\/\/[^\s]+)/g,
-    '<a href="$1" target="_blank">$1</a>'
+    /(\bwebsite\b\s*):?\s*(https?:\/\/[^\s]+)/g,
+    '<a href="$2" target="_blank">$1</a>'
+  );
+
+  // Apply bold formatting to text within double asterisks (**)
+  formattedText = formattedText.replace(
+    /\*\*(.*?)\*\*/g,
+    "<strong>$1</strong>"
   );
 
   // Apply bold formatting to text within double underscores (__)
