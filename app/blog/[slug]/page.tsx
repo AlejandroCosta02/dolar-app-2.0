@@ -44,7 +44,7 @@ function formatText(rawText: string | undefined) {
   // Wrap URLs with <a> tags and custom link text
   formattedText = formattedText.replace(
     /(\bwebsite\b\s*):?\s*(https?:\/\/[^\s]+)/g,
-    '<a href="$2" target="_blank">$1</a>'
+    '<a href="$2" target="_blank" style="color: blue;">$1</a>'
   );
 
   // Apply bold formatting to text within double asterisks (**)
