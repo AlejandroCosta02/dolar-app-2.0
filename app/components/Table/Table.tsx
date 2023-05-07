@@ -79,10 +79,12 @@ const Table: React.FC = () => {
   return (
     <div className="py-12 lg:mx-96 md:mx-10">
       <div
-        className="grid grid-cols-1 gap-4 bg-white rounded-md  mt-8 "
+        className="grid grid-cols-1 gap-2 bg-white  mt-2 rounded-3xl shadow-sm"
         style={{ gridTemplateColumns: "2fr 1fr 1fr" }}
       >
-        <div className="bg-transparent p-2"></div>
+        <div className="px-6 py-4 bg-indigo-600 text-white font-medium uppercase tracking-wider text-xs">
+          Selecciona tu dólar
+        </div>
         <div className="px-6 py-4 bg-green-200 text-gray-700 font-medium uppercase tracking-wider text-xs">
           Compra
         </div>
