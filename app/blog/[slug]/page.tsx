@@ -32,6 +32,27 @@ const fetchEachPost = async (slug: string): Promise<Posts | null> => {
     return null;
   }
 };
+
+function formatText(rawText: string | undefined) {
+  if (!rawText) {
+    return "";
+  }
+
+  // Replace newline characters with <br> tags
+  let formattedText = rawText.replace(/\n/g, "<br>");
+
+  // Wrap URLs with <a> tags
+  formattedText = formattedText.replace(
+    /(https?:\/\/[^\s]+)/g,
+    '<a href="$1" target="_blank">$1</a>'
+  );
+
+  // Apply bold formatting to text within double underscores (__)
+  formattedText = formattedText.replace(/__(.*?)__/g, "<strong>$1</strong>");
+
+  return formattedText;
+}
+
 async function Post({ params }: { params: { slug: string } }) {
   const post = await fetchEachPost(params.slug);
   return (
@@ -55,7 +76,10 @@ async function Post({ params }: { params: { slug: string } }) {
         </div>
         <div className="w-full lg:w-2/3 p-4">
           <h2 className="text-2xl font-bold mb-4">{post?.title}?</h2>
-          <p className="mb-4">{post?.body}</p>
+          <p
+            className="mb-4"
+            dangerouslySetInnerHTML={{ __html: formatText(post?.body) }}
+          ></p>
         </div>
       </div>
     </>
