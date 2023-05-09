@@ -19,7 +19,7 @@ function EachPost({ post }: Props) {
           href={`/blog/${post.slug}`}
           className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
         >
-          Leer mas
+          Leer mas.
         </Link>
       </div>
     </div>
