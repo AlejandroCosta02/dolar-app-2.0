@@ -14,12 +14,11 @@ function EachPost({ post }: Props) {
           alt="img"
         />
         <h2 className="text-xl font-bold mb-2">{post.title}</h2>
-        <p className="text-gray-600 pb-4">{post.description}</p>
         <Link
           href={`/blog/${post.slug}`}
           className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
         >
-          Leer mas.
+          Seguir leyendo
         </Link>
       </div>
     </div>
