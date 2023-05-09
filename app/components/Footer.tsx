@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function Footer() {
   return (
     <>
@@ -7,10 +9,12 @@ function Footer() {
             <p className="text-sm">Copyright © 2023</p>
             <ul className="text-sm">
               <li className="inline-block mx-2">
-                <a href="#">Términos y condiciones</a>
+                <Link href="/terminos-y-condiciones">
+                  Términos y condiciones
+                </Link>
               </li>
               <li className="inline-block mx-2">
-                <a href="#">Políticas de privacidad</a>
+                <Link href="/privacidad">Políticas de privacidad</Link>
               </li>
             </ul>
           </div>

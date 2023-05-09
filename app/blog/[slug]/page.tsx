@@ -1,13 +1,15 @@
 import { PrismaClient } from "@prisma/client";
+import { format } from "date-fns";
+import { es } from "date-fns/locale";
 
 const prisma = new PrismaClient();
-
 interface Posts {
   id: number;
   title: string;
   body: string;
   image: string;
   slug: string;
+  createdAt: Date;
 }
 const fetchEachPost = async (slug: string): Promise<Posts | null> => {
   try {
@@ -21,6 +23,7 @@ const fetchEachPost = async (slug: string): Promise<Posts | null> => {
         body: true,
         image: true,
         slug: true,
+        createdAt: true,
       },
     });
     if (!post) {
@@ -84,13 +87,18 @@ async function Post({ params }: { params: { slug: string } }) {
             className="object-cover rounded-lg h-full w-full"
           />
         </div>
-        <div className="w-full lg:w-2/3 p-4">
-          <h2 className="text-2xl font-bold mb-4">{post?.title}!?</h2>
+        <div className="w-full lg:w-2/3 p-4 text-justify">
+          {post?.createdAt && (
+            <p className="text-right pb-3 font-semibold pr-2">
+              {format(new Date(post.createdAt), "MMMM dd, yyyy", {
+                locale: es,
+              })}
+            </p>
+          )}
           <p
-            className="mb-4"
+            className="mb-4 text-2xl sm:text-lg "
             dangerouslySetInnerHTML={{ __html: formatText(post?.body) }}
           ></p>
-          <p>fecha</p>
         </div>
       </div>
     </>

@@ -148,3 +148,27 @@ export const dolar_ccl_venta = async (): Promise<string> => {
 
   return dolar_ccl_venta;
 };
+// DOLAR TURISTA
+export const dolar_turista_venta = async (): Promise<string> => {
+  const data = await getApiData();
+
+  const dolar_turista_venta = data[6]?.casa?.venta;
+
+  if (!dolar_turista_venta) {
+    throw new Error("Unable to fetch casa venta data from API");
+  }
+
+  return dolar_turista_venta;
+};
+export const dolar_turista_nombre = async (): Promise<string> => {
+  const data = await getApiData();
+
+  const dolar_turista_nombre = data[6]?.casa?.nombre;
+
+  if (!dolar_turista_nombre) {
+    throw new Error("Unable to fetch casa venta data from API");
+  }
+
+  return dolar_turista_nombre;
+};
+//DOLAR TARJETA

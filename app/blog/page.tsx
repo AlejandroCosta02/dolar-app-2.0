@@ -1,6 +1,6 @@
 import EachPost from "./components/EachPost";
 import HeroBlog from "./components/HeroBlog";
-import { PrismaClient, Post } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 
 export interface PostPropType {
   id: number;
@@ -8,6 +8,7 @@ export interface PostPropType {
   description: string;
   image: string;
   slug: string;
+  createdAt: Date;
 }
 const prisma = new PrismaClient();
 
@@ -19,6 +20,7 @@ const fetchData = async (): Promise<PostPropType[]> => {
       description: true,
       image: true,
       slug: true,
+      createdAt: true,
     },
   });
   return post;

@@ -15,6 +15,8 @@ import {
   dolar_ccl_nombre,
   dolar_ccl_compra,
   dolar_ccl_venta,
+  dolar_turista_nombre,
+  dolar_turista_venta,
 } from "../NewApi";
 import LoadingComponent from "../LoadingComponent";
 import Link from "next/link";
@@ -33,6 +35,9 @@ const Table: React.FC = () => {
   const [dolarCCLVenta, setDolarCCLVenta] = useState<string>("");
   const [dolarCCLCompra, setDolarCCLCompra] = useState<string>("");
   const [dolarCCLNombre, setDolarCCLNombre] = useState<string>("");
+  const [dolarTuristaNombre, setDolarTuristaNombre] = useState<string>("");
+  const [dolarTuristaVenta, setDolarTuristaVenta] = useState<string>("");
+  const [dolarTarjetaVenta, setDolarTarjetaVenta] = useState<string>("");
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -59,6 +64,11 @@ const Table: React.FC = () => {
       const cclVenta = await dolar_ccl_venta();
       const cclCompra = await dolar_ccl_compra();
       const cclNombre = await dolar_ccl_nombre();
+      const turistaNombre = await dolar_turista_nombre();
+      const turistaVenta = await dolar_turista_venta();
+      const tarjetaVenta = await dolar_oficial_venta();
+      const dolarTarjetaVentaAsNumber = parseFloat(tarjetaVenta);
+      const newDolarTarjetaVenta = dolarTarjetaVentaAsNumber * 1.75;
       setIsLoading(false);
       setDolarOficialNombre(oficialName);
       setDolarBlueNombre(blueName);
@@ -72,6 +82,9 @@ const Table: React.FC = () => {
       setDolarCCLVenta(cclVenta);
       setDolarCCLCompra(cclCompra);
       setDolarCCLNombre(cclNombre);
+      setDolarTuristaNombre(turistaNombre);
+      setDolarTuristaVenta(turistaVenta);
+      setDolarTarjetaVenta(newDolarTarjetaVenta.toString());
     }
     fetchDolarNames();
   }, []);
@@ -134,6 +147,28 @@ const Table: React.FC = () => {
         </div>
         <div className="px-6 py-4 bg-white text-gray-700 font-normal tracking-tight text-sm">
           {isLoading ? <LoadingComponent /> : dolarCCLVenta}
+        </div>
+        <div className="px-6 py-4 bg-white text-gray-700 font-semibold tracking-tight text-sm hover:bg-gray-800 transition duration-300 ease-in-out hover:text-white">
+          <Link href="/dolarturista/venta">
+            {isLoading ? <LoadingComponent /> : dolarTuristaNombre}
+          </Link>
+        </div>
+        <div className="px-6 py-4 bg-white text-gray-700 font-normal tracking-tight text-sm text-center ">
+          {/* {isLoading ? <LoadingComponent /> : dolarCCLCompra} */}❌
+        </div>
+        <div className="px-6 py-4 bg-white text-gray-700 font-normal tracking-tight text-sm">
+          {isLoading ? <LoadingComponent /> : dolarTuristaVenta}
+        </div>
+        <div className="px-6 py-4 bg-white text-gray-700 font-semibold tracking-tight text-sm hover:bg-gray-800 transition duration-300 ease-in-out hover:text-white">
+          <Link href="/dolarturista/venta">
+            {isLoading ? <LoadingComponent /> : "Dolar tarjeta"}
+          </Link>
+        </div>
+        <div className="px-6 py-4 bg-white text-gray-700 font-normal tracking-tight text-sm text-center ">
+          {/* {isLoading ? <LoadingComponent /> : dolarCCLCompra} */}❌
+        </div>
+        <div className="px-6 py-4 bg-white text-gray-700 font-normal tracking-tight text-sm">
+          {isLoading ? <LoadingComponent /> : dolarTarjetaVenta}
         </div>
       </div>
     </div>
