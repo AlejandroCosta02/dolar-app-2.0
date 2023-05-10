@@ -1,7 +1,14 @@
 "use client";
-import { NextSeo } from "next-seo";
-import { TwitterShareButton } from "next-share";
-import { AiFillTwitterCircle } from "react-icons/ai";
+import {
+  TwitterShareButton,
+  WhatsappShareButton,
+  EmailShareButton,
+} from "next-share";
+import {
+  AiFillTwitterCircle,
+  AiOutlineWhatsApp,
+  AiTwotoneMail,
+} from "react-icons/ai";
 function ShareButton({
   title,
   url,
@@ -15,23 +22,29 @@ function ShareButton({
 }) {
   return (
     <>
-      <NextSeo
-        title={title}
-        description={description}
-        canonical={url}
-        openGraph={{
-          title,
-          description,
-          url,
-          images: [{ url: image }],
-        }}
-      />
+      {/* TWITTER */}
       <TwitterShareButton
         url={`https://dolar-app-2-0.vercel.app/blog/${url}`}
         title={title}
       >
         <AiFillTwitterCircle className="w-12 h-12 text-gray-800" />
       </TwitterShareButton>
+      {/* WPP */}
+      <WhatsappShareButton
+        url={`https://dolar-app-2-0.vercel.app/blog/${url}`}
+        title={title}
+        separator=": "
+      >
+        <AiOutlineWhatsApp className="w-12 h-12 text-gray-800" />
+      </WhatsappShareButton>
+      {/* MAIL */}
+      <EmailShareButton
+        url={`https://dolar-app-2-0.vercel.app/blog/${url}`}
+        subject={title}
+        body="body"
+      >
+        <AiTwotoneMail className="w-12 h-12 text-gray-800" />
+      </EmailShareButton>
     </>
   );
 }
