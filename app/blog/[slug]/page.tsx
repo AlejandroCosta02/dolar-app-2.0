@@ -106,6 +106,7 @@ async function Post({ params }: { params: { slug: string } }) {
             title={`${post?.title}`}
             url={`${post?.slug}`}
             description={`${post?.description}`}
+            image={`${post?.image}`}
           />
         </div>
       </div>
