@@ -7,7 +7,7 @@ interface Props {
 function EachPost({ post }: Props) {
   return (
     <div className="">
-      <div className="bg-white rounded-lg shadow-md p-4">
+      <div className="bg-white rounded-lg shadow-md p-4 mt-2">
         <img
           src={post.image}
           className=" mb-2 w-full h-full object-fit-cover"
