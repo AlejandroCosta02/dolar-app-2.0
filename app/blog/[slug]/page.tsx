@@ -89,14 +89,14 @@ async function Post({ params }: { params: { slug: string } }) {
         </div>
         <div className="w-full lg:w-2/3 p-4 text-justify">
           {post?.createdAt && (
-            <p className="text-right pb-3 font-semibold pr-2">
+            <p className="text-right pb-3 font-semibold pr-2 dark:text-black">
               {format(new Date(post.createdAt), "MMMM dd, yyyy", {
                 locale: es,
               })}
             </p>
           )}
           <p
-            className="mb-4 text-2xl sm:text-lg "
+            className="mb-4 text-2xl sm:text-lg dark:text-black"
             dangerouslySetInnerHTML={{ __html: formatText(post?.body) }}
           ></p>
         </div>

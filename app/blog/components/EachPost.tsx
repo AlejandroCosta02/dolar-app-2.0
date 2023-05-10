@@ -13,7 +13,7 @@ function EachPost({ post }: Props) {
           className=" mb-2 w-full h-full object-fit-cover"
           alt="img"
         />
-        <h2 className="text-xl font-bold mb-5">{post.title}</h2>
+        <h2 className="text-xl font-bold mb-5 dark:text-black">{post.title}</h2>
         <Link
           href={`/blog/${post.slug}`}
           className="mt-4 bg-gray-800 hover:bg-green-800 text-white py-2 px-4 rounded"
