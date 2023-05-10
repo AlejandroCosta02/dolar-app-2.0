@@ -92,7 +92,7 @@ const Table: React.FC = () => {
   return (
     <div className="py-12 lg:mx-96 md:mx-10">
       <div
-        className="grid grid-cols-1 gap-2 bg-white  mt-2 rounded-3xl shadow-sm"
+        className="grid grid-cols-1 gap-2 bg-white  mt-2 rounded-3xl shadow-sm "
         style={{ gridTemplateColumns: "2fr 1fr 1fr" }}
       >
         <div className="px-6 py-4 bg-indigo-600 text-white font-medium uppercase tracking-wider text-xs">

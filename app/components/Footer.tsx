@@ -16,6 +16,9 @@ function Footer() {
               <li className="inline-block mx-2">
                 <Link href="/privacidad">Políticas de privacidad</Link>
               </li>
+              <li className="inline-block mx-2">
+                <Link href="/contacto">Contacto</Link>
+              </li>
             </ul>
           </div>
         </div>
