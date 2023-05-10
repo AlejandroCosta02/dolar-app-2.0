@@ -1,5 +1,6 @@
 "use client";
 import { TwitterShareButton } from "next-share";
+import Image from "next/image";
 import { AiFillTwitterCircle } from "react-icons/ai";
 function ShareButton({
   title,
