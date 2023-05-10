@@ -7,12 +7,52 @@ const ContactPage: React.FC = () => {
   const [lastName, setLastName] = useState("");
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // handle form submission
+    setSubmitting(true);
+
+    try {
+      // Send the form data to the backend API
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          firstName,
+          lastName,
+          title,
+          message,
+        }),
+      });
+
+      if (response.ok) {
+        // Form submission successful
+        setSubmitted(true);
+      } else {
+        // Form submission failed
+        console.error("Form submission failed.");
+      }
+    } catch (error) {
+      console.error("An error occurred during form submission:", error);
+    }
+
+    setSubmitting(false);
   };
 
+  if (submitted) {
+    return (
+      <div className="py-12 flex flex-col justify-center items-center">
+        <p className="text-2xl text-green-600">
+          Your message has been submitted successfully!
+        </p>
+      </div>
+    );
+  }
   return (
     <>
       <div className="bg-gray-800 py-12">

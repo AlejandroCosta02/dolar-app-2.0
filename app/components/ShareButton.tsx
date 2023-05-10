@@ -21,7 +21,7 @@ function ShareButton({
   image: string;
 }) {
   return (
-    <>
+    <div className="flex space-x-5 ">
       {/* TWITTER */}
       <TwitterShareButton
         url={`https://dolar-app-2-0.vercel.app/blog/${url}`}
@@ -45,7 +45,7 @@ function ShareButton({
       >
         <AiTwotoneMail className="w-12 h-12 text-gray-800" />
       </EmailShareButton>
-    </>
+    </div>
   );
 }
 

@@ -101,6 +101,10 @@ async function Post({ params }: { params: { slug: string } }) {
             className="mb-4 text-2xl sm:text-lg dark:text-black"
             dangerouslySetInnerHTML={{ __html: formatText(post?.body) }}
           ></p>
+
+          <p className="underline font-semibold pb-3 text-2xl sm:text-lg dark:text-black">
+            Compartir:
+          </p>
           {/* SHARE BUTTON */}
           <ShareButton
             title={`${post?.title}`}
