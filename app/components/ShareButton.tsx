@@ -12,7 +12,10 @@ function ShareButton({
 }) {
   return (
     <>
-      <TwitterShareButton url={url} title={description}>
+      <TwitterShareButton
+        url={`https://dolar-app-2-0.vercel.app/blog/${url}`}
+        title={description}
+      >
         <AiFillTwitterCircle className="w-12 h-12 text-gray-800" />
       </TwitterShareButton>
     </>
