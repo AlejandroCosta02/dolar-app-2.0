@@ -1,7 +1,7 @@
+import ShareButton from "@/app/components/ShareButton";
 import { PrismaClient } from "@prisma/client";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
-
 const prisma = new PrismaClient();
 interface Posts {
   id: number;
@@ -10,6 +10,7 @@ interface Posts {
   image: string;
   slug: string;
   createdAt: Date;
+  description: string;
 }
 const fetchEachPost = async (slug: string): Promise<Posts | null> => {
   try {
@@ -24,6 +25,7 @@ const fetchEachPost = async (slug: string): Promise<Posts | null> => {
         image: true,
         slug: true,
         createdAt: true,
+        description: true,
       },
     });
     if (!post) {
@@ -99,6 +101,12 @@ async function Post({ params }: { params: { slug: string } }) {
             className="mb-4 text-2xl sm:text-lg dark:text-black"
             dangerouslySetInnerHTML={{ __html: formatText(post?.body) }}
           ></p>
+          {/* SHARE BUTTON */}
+          <ShareButton
+            title={`${post?.title}`}
+            url={`${post?.slug}`}
+            description={`${post?.description}`}
+          />
         </div>
       </div>
     </>
