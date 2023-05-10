@@ -64,7 +64,7 @@ function Conversion_2({ dolarblue }: { dolarblue: number }) {
             <input
               type="text"
               name="hs-input-with-leading-and-trailing-icon"
-              className="w-3/4 py-3 px-4 pl-9 shadow-sm rounded-sm text-3xl font-bold border-b-4 outline-0 border-gray-800 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              className="w-3/4 py-3 px-4 pl-9 shadow-sm rounded-sm text-3xl font-bold border-b-4 outline-0 border-gray-800 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none dark:text-black"
               placeholder=""
               value={result ? result.toFixed(2) : "0.00"}
               readOnly
@@ -83,7 +83,7 @@ function Conversion_2({ dolarblue }: { dolarblue: number }) {
           {/* USER INPUT */}
           <div className="relative">
             <input
-              className="w-3/4 py-3 px-4 pl-9 shadow-sm rounded-sm text-3xl font-bold border-b-4 outline-0 border-gray-800 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              className="w-3/4 py-3 px-4 pl-9 shadow-sm rounded-sm text-3xl font-bold border-b-4 outline-0 border-gray-800 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none dark:text-black"
               type="number"
               id="value-input"
               placeholder="0.00"
@@ -114,7 +114,7 @@ function Conversion_2({ dolarblue }: { dolarblue: number }) {
             <input
               type="text"
               name="hs-input-with-leading-and-trailing-icon"
-              className="w-3/4 py-3 px-4 pl-9 shadow-sm rounded-sm text-3xl font-bold border-b-4 outline-0 border-gray-800 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              className="w-3/4 py-3 px-4 pl-9 shadow-sm rounded-sm text-3xl font-bold border-b-4 outline-0 border-gray-800 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none dark:text-black"
               placeholder=""
               value={result ? result.toFixed(2) : "0.00"}
               readOnly
