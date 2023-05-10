@@ -21,7 +21,7 @@ const ContactPage: React.FC = () => {
         </h3>
       </div>
       <div className="pt-12 flex flex-col justify-center items-center px-12">
-        <form className="w-96" onSubmit={handleFormSubmit}>
+        <form className="w-auto" onSubmit={handleFormSubmit}>
           <div className="mb-4">
             <label
               htmlFor="email"
