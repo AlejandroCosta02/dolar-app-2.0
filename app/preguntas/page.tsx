@@ -38,7 +38,7 @@ export default function FAQ() {
             onClick={() =>
               setOpenQuestionIndex(openQuestionIndex === i ? null : i)
             }
-            className="w-full flex justify-between items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-colors duration-200"
+            className="w-full flex justify-between items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-colors duration-200 dark:text-black"
           >
             <span className="text-lg font-medium">{q.question}</span>
             {openQuestionIndex === i ? (
