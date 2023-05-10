@@ -20,7 +20,7 @@ const ContactPage: React.FC = () => {
           Contacto
         </h3>
       </div>
-      <div className="pt-12 flex flex-col justify-center items-center">
+      <div className="pt-12 flex flex-col justify-center items-center px-12">
         <form className="w-96" onSubmit={handleFormSubmit}>
           <div className="mb-4">
             <label
