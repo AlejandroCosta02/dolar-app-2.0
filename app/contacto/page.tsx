@@ -1,164 +1,103 @@
 "use client";
-import { useState } from "react";
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import { BiMailSend } from "react-icons/bi";
-const ContactPage: React.FC = () => {
-  const [email, setEmail] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [title, setTitle] = useState("");
-  const [message, setMessage] = useState("");
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setSubmitting(true);
-
-    try {
-      // Send the form data to the backend API
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          firstName,
-          lastName,
-          title,
-          message,
-        }),
-      });
-
-      if (response.ok) {
-        // Form submission successful
-        setSubmitted(true);
-      } else {
-        // Form submission failed
-        console.error("Form submission failed.");
-      }
-    } catch (error) {
-      console.error("An error occurred during form submission:", error);
-    }
-
-    setSubmitting(false);
-  };
-
-  if (submitted) {
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import MessageSent from "../components/MessageSent";
+function ContactForm() {
+  const notify = () =>
+    toast.success("Mensaje Enviado Correctamente", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  const [state, handleSubmit] = useForm("xqkojkjn");
+  if (state.succeeded) {
     return (
-      <div className="py-12 flex flex-col justify-center items-center">
-        <p className="text-2xl text-green-600">
-          Your message has been submitted successfully!
-        </p>
-      </div>
+      <>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+        <MessageSent />
+      </>
     );
   }
   return (
     <>
-      <div className="bg-gray-800 py-12">
+      <div className="bg-gray-800 py-12 ">
         <h3 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl text-center">
           Contacto
         </h3>
       </div>
-      <div className="pt-12 flex flex-col justify-center items-center px-12">
-        <form className="w-auto" onSubmit={handleFormSubmit}>
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block mb-2 font-semibold text-gray-700"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="border-2 border-gray-400 p-2 w-full rounded-md"
-              required
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-            />
-          </div>
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            <div>
-              <label
-                htmlFor="firstName"
-                className="block mb-2 font-semibold text-gray-700"
-              >
-                Nombre
-              </label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                className="border-2 border-gray-400 p-2 w-full rounded-md"
-                required
-                value={firstName}
-                onChange={(event) => setFirstName(event.target.value)}
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="lastName"
-                className="block mb-2 font-semibold text-gray-700"
-              >
-                Apellido
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                className="border-2 border-gray-400 p-2 w-full rounded-md"
-                required
-                value={lastName}
-                onChange={(event) => setLastName(event.target.value)}
-              />
-            </div>
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="title"
-              className="block mb-2 font-semibold text-gray-700"
-            >
-              Asunto
-            </label>
-            <input
-              type="text"
-              id="title"
-              name="title"
-              className="border-2 border-gray-400 p-2 w-full rounded-md"
-              required
-              value={title}
-              onChange={(event) => setTitle(event.target.value)}
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="message"
-              className="block mb-2 font-semibold text-gray-700"
-            >
-              Mensaje
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              className="border-2 border-gray-400 p-2 w-full rounded-md"
-              rows={5}
-              required
-              value={message}
-              onChange={(event) => setMessage(event.target.value)}
-            ></textarea>
-          </div>
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto pt-5">
+        <div className="grid grid-cols-1 gap-4">
+          <label htmlFor="full-name" className="text-gray-700">
+            Nombre completo
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="full-name"
+            placeholder="First and Last"
+            required={true}
+            className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          />
+
+          <label htmlFor="email" className="text-gray-700">
+            Correo Electronico
+          </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
+
+          <label htmlFor="message" className="text-gray-700">
+            Mensaje
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          />
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
+
           <button
+            onClick={notify}
             type="submit"
-            className="px-3 py-2 font-medium rounded leading-5 bg-green-500 text-primary-100 text-black hover:text-white hover:bg-green-700"
+            disabled={state.submitting}
+            className="px-3 py-2 text-lg font-semibold rounded leading-5 bg-green-500 text-primary-100 text-white hover:text-white hover:bg-green-700"
           >
-            <BiMailSend className="inline-block w-5 h-5" /> Enviar
+            <BiMailSend className="w-8 h-8 inline-block mr-2" />
+            Submit
           </button>
-        </form>
-      </div>
+        </div>
+      </form>
     </>
   );
-};
-
-export default ContactPage;
+}
+function App() {
+  return <ContactForm />;
+}
+export default App;
