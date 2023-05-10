@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+import { BiMailSend } from "react-icons/bi";
 const ContactPage: React.FC = () => {
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -45,7 +45,7 @@ const ContactPage: React.FC = () => {
                 htmlFor="firstName"
                 className="block mb-2 font-semibold text-gray-700"
               >
-                First Name
+                Nombre
               </label>
               <input
                 type="text"
@@ -62,7 +62,7 @@ const ContactPage: React.FC = () => {
                 htmlFor="lastName"
                 className="block mb-2 font-semibold text-gray-700"
               >
-                Last Name
+                Apellido
               </label>
               <input
                 type="text"
@@ -80,7 +80,7 @@ const ContactPage: React.FC = () => {
               htmlFor="title"
               className="block mb-2 font-semibold text-gray-700"
             >
-              Title
+              Asunto
             </label>
             <input
               type="text"
@@ -97,7 +97,7 @@ const ContactPage: React.FC = () => {
               htmlFor="message"
               className="block mb-2 font-semibold text-gray-700"
             >
-              Message
+              Mensaje
             </label>
             <textarea
               id="message"
@@ -111,9 +111,9 @@ const ContactPage: React.FC = () => {
           </div>
           <button
             type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+            className="px-3 py-2 font-medium rounded leading-5 bg-green-500 text-primary-100 text-black hover:text-white hover:bg-green-700"
           >
-            Send
+            <BiMailSend className="inline-block w-5 h-5" /> Enviar
           </button>
         </form>
       </div>
