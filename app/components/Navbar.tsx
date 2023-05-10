@@ -14,7 +14,9 @@ function Navbar() {
           className=""
         />
       </Link>
-      <p>Sign In</p>
+      <p>
+        <Link href="/contacto">Contacto</Link>
+      </p>
     </nav>
   );
 }
