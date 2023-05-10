@@ -44,32 +44,33 @@ function ContactForm() {
           Contacto
         </h3>
       </div>
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto pt-5">
-        <div className="grid grid-cols-1 gap-4">
-          <label htmlFor="full-name" className="text-gray-700">
+      <form onSubmit={handleSubmit} className="w-1/2 mx-auto pt-5 py-12">
+        <div className="grid grid-cols-1 gap-2">
+          <label htmlFor="full-name" className="text-gray-700 font-semibold">
             Nombre completo
           </label>
           <input
             type="text"
             name="name"
             id="full-name"
-            placeholder="First and Last"
+            placeholder="nombre y apellido"
             required={true}
             className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
           />
 
-          <label htmlFor="email" className="text-gray-700">
+          <label htmlFor="email" className="text-gray-700 font-semibold">
             Correo Electronico
           </label>
           <input
             id="email"
             type="email"
             name="email"
+            placeholder="ejemplo@correo.com"
             className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
 
-          <label htmlFor="message" className="text-gray-700">
+          <label htmlFor="message" className="text-gray-700 font-semibold">
             Mensaje
           </label>
           <textarea
