@@ -55,7 +55,7 @@ function ContactForm() {
             id="full-name"
             placeholder="nombre y apellido"
             required={true}
-            className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-green-500"
           />
 
           <label htmlFor="email" className="text-gray-700 font-semibold">
@@ -66,7 +66,8 @@ function ContactForm() {
             type="email"
             name="email"
             placeholder="ejemplo@correo.com"
-            className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-green-500"
+            required={true}
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
 
@@ -74,9 +75,10 @@ function ContactForm() {
             Mensaje
           </label>
           <textarea
+            required={true}
             id="message"
             name="message"
-            className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-green-500"
           />
           <ValidationError
             prefix="Message"
