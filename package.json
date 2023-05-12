@@ -5,9 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
-    "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
-    "lint": "next lint",
-    "export": "npm run build && next export && mv out_static"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@formspree/react": "^2.4.1",
