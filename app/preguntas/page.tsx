@@ -14,9 +14,10 @@ export default function FAQ() {
         " Para comprar dólares en Argentina, se deben seguir los procedimientos establecidos por el Banco Central de la República Argentina (BCRA). En general, es necesario contar con una cuenta bancaria y cumplir con los requisitos y límites establecidos por las regulaciones cambiarias vigentes. Es recomendable comunicarse con el banco o entidad financiera correspondiente para obtener información específica sobre los pasos a seguir.",
     },
     {
-      question: "Q2",
+      question:
+        "¿Cuál es la diferencia entre el dólar oficial y el dólar blue en Argentina?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, hic ullam, perspiciatis numquam eius ea fuga adipisci porro itaque sequi magnam repudiandae facere, maxime aperiam provident voluptatem recusandae placeat ut.",
+        "El término dólar oficial se refiere al tipo de cambio establecido por el gobierno argentino y utilizado para transacciones oficiales. Por otro lado, el término dólar blue se utiliza para hacer referencia al mercado paralelo o informal del dólar, donde el tipo de cambio puede ser diferente al oficial debido a la demanda y oferta en ese mercado. La diferencia entre ambos tipos de cambio puede variar y está sujeta a cambios constantes. Es importante tener en cuenta que el uso del dólar blue puede estar sujeto a restricciones y riesgos adicionales.",
     },
     {
       question: "Q3",

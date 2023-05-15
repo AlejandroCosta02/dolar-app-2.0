@@ -1,3 +1,4 @@
+import Script from "next/script";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./globals.css";
@@ -7,6 +8,7 @@ const raleway = Raleway({
   style: ["normal", "italic"],
   subsets: ["latin"],
 });
+import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 
 export const metadata = {
   title: "Dolar Blue",
@@ -49,6 +51,7 @@ export default function RootLayout({
           noModule
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
         ></script>
+        <GoogleAnalytics measurementId="G-0FL3YES4FQ" />
         {/* END SCRIPT */}
       </body>
     </html>
