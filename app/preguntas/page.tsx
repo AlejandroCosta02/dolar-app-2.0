@@ -9,9 +9,9 @@ export default function FAQ() {
 
   const questions = [
     {
-      question: "Q1",
+      question: "¿Cómo puedo comprar dólares en Argentina?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, maiores ullam quaerat sequi fuga temporibus.",
+        " Para comprar dólares en Argentina, se deben seguir los procedimientos establecidos por el Banco Central de la República Argentina (BCRA). En general, es necesario contar con una cuenta bancaria y cumplir con los requisitos y límites establecidos por las regulaciones cambiarias vigentes. Es recomendable comunicarse con el banco o entidad financiera correspondiente para obtener información específica sobre los pasos a seguir.",
     },
     {
       question: "Q2",
