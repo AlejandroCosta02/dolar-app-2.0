@@ -29,7 +29,7 @@ function Conversion_2({ dolarblue }: { dolarblue: number }) {
   return (
     <>
       {changeLayout ? (
-        <main className="flex flex-col items-center justify-center w-3/4 h-full m-auto pb-10">
+        <main className="flex flex-col items-center justify-center w-3/4 h-full m-auto pb-28">
           {/* USER INPUT */}
           <div className="relative">
             <input

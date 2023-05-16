@@ -90,7 +90,7 @@ const Table: React.FC = () => {
   }, []);
 
   return (
-    <div className="py-12 lg:mx-96 md:mx-10">
+    <div className="py-5 md:mx-10">
       <div
         className="grid grid-cols-1 gap-2 bg-white  mt-2 rounded-3xl shadow-sm "
         style={{ gridTemplateColumns: "2fr 1fr 1fr" }}
@@ -160,7 +160,7 @@ const Table: React.FC = () => {
           {isLoading ? <LoadingComponent /> : dolarTuristaVenta}
         </div>
         <div className="px-6 py-4 bg-white text-gray-700 font-semibold tracking-tight text-sm hover:bg-gray-800 transition duration-300 ease-in-out hover:text-white">
-          <Link href="/dolarturista/venta">
+          <Link href="/dolartarjeta/venta">
             {isLoading ? <LoadingComponent /> : "Dolar tarjeta"}
           </Link>
         </div>

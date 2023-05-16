@@ -1,3 +1,4 @@
+import AdsComponent from "@/app/components/Ads/AdsComponent";
 import ConverionVenta from "@/app/components/ConversionVenta";
 import {
   dolar_turista_nombre,
@@ -16,10 +17,20 @@ async function DT_Venta() {
         </h3>
         <IndexPage />
       </div>
-      <p className="text-center text-5xl text-bold my-11">
-        ${dolarturista_venta}
-      </p>
-      <ConverionVenta dolarValue={parseFloat(dolarturista_venta)} />
+      <div className="grid grid-cols-12 gap-2">
+        <div className="col-span-12 md:col-span-2">
+          <AdsComponent />
+        </div>
+        <div className="col-span-12 md:col-span-8">
+          <p className="text-center text-5xl text-bold my-11">
+            ${dolarturista_venta}
+          </p>
+          <ConverionVenta dolarValue={parseFloat(dolarturista_venta)} />
+        </div>
+        <div className="col-span-12 md:col-span-2">
+          <AdsComponent />
+        </div>
+      </div>
     </>
   );
 }

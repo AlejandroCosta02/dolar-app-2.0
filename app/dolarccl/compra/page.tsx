@@ -1,3 +1,5 @@
+import AdsComponent from "@/app/components/Ads/AdsComponent";
+import AdsComponentHorizontal from "@/app/components/Ads/AdsComponentHorizontal";
 import Conversion_2 from "@/app/components/Conversion_2";
 import NavDolar from "@/app/components/NavDolar";
 import { dolar_ccl_compra, dolar_ccl_nombre } from "@/app/components/NewApi";
@@ -17,9 +19,23 @@ async function dolarCclVenta() {
         </h3>
         <IndexPage />
       </div>
-      <p className="text-center text-5xl text-bold my-11">${dolarccl_compra}</p>
-      <NavDolar href={path} href_1={path_1} />
-      <Conversion_2 dolarblue={parseFloat(dolarccl_compra)} />
+      <div className="grid grid-cols-12 gap-2">
+        <div className="col-span-12 md:col-span-2">
+          <AdsComponent />
+        </div>
+        <div className="col-span-12 md:col-span-8">
+          <p className="text-center text-5xl text-bold my-11">
+            ${dolarccl_compra}
+          </p>
+          <NavDolar href={path} href_1={path_1} />
+
+          <Conversion_2 dolarblue={parseFloat(dolarccl_compra)} />
+        </div>
+        <div className="col-span-12 md:col-span-2">
+          <AdsComponent />
+        </div>
+      </div>
+      <AdsComponentHorizontal />
     </>
   );
 }
