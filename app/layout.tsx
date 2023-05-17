@@ -11,7 +11,7 @@ import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 
 export const metadata = {
   title: "Precio Dolar Arg",
-  description: "Ultima cotización del dolar blue - Argentina -",
+  description: "Ultima cotización del dolar - Argentina -",
   keywords: [
     "dolarblue",
     "dolar argentina",
