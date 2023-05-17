@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://preciodolar.lat
+
+# Sitemaps
+Sitemap: https://preciodolar.lat/sitemap.xml
