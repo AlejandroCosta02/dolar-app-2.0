@@ -1,4 +1,3 @@
-import Script from "next/script";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./globals.css";
@@ -11,20 +10,13 @@ const raleway = Raleway({
 import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 
 export const metadata = {
-  title: "Dolar Blue",
+  title: "Precio Dolar Arg",
   description: "Ultima cotización del dolar blue - Argentina -",
   keywords: [
     "dolarblue",
     "dolar argentina",
     "dolar cotizacion",
     "argentina dolar blue",
-  ],
-  images: [
-    {
-      url: "https://nextjs.org/og.png",
-      width: 800,
-      height: 600,
-    },
   ],
 };
 

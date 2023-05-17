@@ -9,12 +9,12 @@ function TerminosYCondiciones() {
       <div className="mx-12 pt-8 text-justify">
         <h1 className="text-2xl font-bold mb-4">Términos y condiciones</h1>
         <p className="mb-4">
-          Bienvenido a [Nombre de su sitio web]. Estos términos y condiciones
-          rigen su uso de nuestro sitio web y los servicios que ofrecemos. Al
-          acceder a nuestro sitio web y utilizar nuestros servicios, usted
-          acepta estos términos y condiciones en su totalidad. Si no acepta
-          estos términos y condiciones, no puede utilizar nuestro sitio web ni
-          nuestros servicios.
+          Bienvenido a 'preciodolar.lat'. Estos términos y condiciones rigen su
+          uso de nuestro sitio web y los servicios que ofrecemos. Al acceder a
+          nuestro sitio web y utilizar nuestros servicios, usted acepta estos
+          términos y condiciones en su totalidad. Si no acepta estos términos y
+          condiciones, no puede utilizar nuestro sitio web ni nuestros
+          servicios.
         </p>
         <h2 className="text-lg font-bold mb-4">Uso del sitio web</h2>
         <p className="mb-4">
@@ -27,7 +27,7 @@ function TerminosYCondiciones() {
         <p className="mb-4">
           El contenido de nuestro sitio web, incluyendo pero no limitado a
           texto, gráficos, logotipos, imágenes y software, es propiedad de
-          [Nombre de su sitio web] y está protegido por las leyes de propiedad
+          'preciodolar.lat' y está protegido por las leyes de propiedad
           intelectual. Usted acepta no reproducir, distribuir, modificar o
           utilizar nuestro contenido sin nuestro permiso previo y por escrito.
         </p>
@@ -35,9 +35,9 @@ function TerminosYCondiciones() {
           Limitación de responsabilidad
         </h2>
         <p className="mb-4">
-          En ningún caso [Nombre de su sitio web] será responsable por cualquier
-          daño directo, indirecto, incidental, especial o consecuente que surja
-          del uso o la imposibilidad de uso de nuestro sitio web o nuestros
+          En ningún caso 'preciodolar.lat' será responsable por cualquier daño
+          directo, indirecto, incidental, especial o consecuente que surja del
+          uso o la imposibilidad de uso de nuestro sitio web o nuestros
           servicios. Usted acepta utilizar nuestro sitio web y nuestros
           servicios bajo su propio riesgo.
         </p>
@@ -47,9 +47,9 @@ function TerminosYCondiciones() {
         <p className="mb-4">
           Nuestro sitio web puede contener enlaces a sitios web de terceros.
           Estos enlaces son proporcionados para su conveniencia y no implican
-          que [Nombre de su sitio web] los respalde o tenga control sobre ellos.
-          No somos responsables del contenido o la privacidad de los sitios web
-          de terceros.
+          que 'preciodolar.lat' los respalde o tenga control sobre ellos. No
+          somos responsables del contenido o la privacidad de los sitios web de
+          terceros.
         </p>
         <h2 className="text-lg font-bold mb-4">
           Modificaciones de los términos y condiciones
@@ -62,10 +62,10 @@ function TerminosYCondiciones() {
         </p>
         <h2 className="text-lg font-bold mb-4">Ley aplicable</h2>
         <p className="mb-4">
-          Estos términos y condiciones se rigen por las leyes de [país donde
-          está ubicado su sitio web]. Cualquier disputa que surja de estos
-          términos y condiciones se resolverá exclusivamente en los tribunales
-          de [ciudad o región donde está ubicado su sitio web].
+          Estos términos y condiciones se rigen por las leyes de la Republica
+          Argentina. Cualquier disputa que surja de estos términos y condiciones
+          se resolverá exclusivamente en los tribunales de la Republica
+          Argentina.
         </p>
       </div>
     </>

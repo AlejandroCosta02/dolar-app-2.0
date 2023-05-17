@@ -9,10 +9,10 @@ function Privacidad() {
       <div className="mx-12 pt-8 text-justify">
         <h1 className="text-2xl font-bold mb-4">Política de privacidad</h1>
         <p className="mb-4">
-          En [Nombre de su sitio web] valoramos la privacidad de nuestros
-          usuarios y nos comprometemos a protegerla. La siguiente política de
-          privacidad explica cómo recopilamos, usamos y protegemos la
-          información personal que recopilamos de nuestros usuarios.
+          En 'preciodolar.lat' valoramos la privacidad de nuestros usuarios y
+          nos comprometemos a protegerla. La siguiente política de privacidad
+          explica cómo recopilamos, usamos y protegemos la información personal
+          que recopilamos de nuestros usuarios.
         </p>
         <h2 className="text-lg font-bold mb-4">
           Recopilación de información personal
