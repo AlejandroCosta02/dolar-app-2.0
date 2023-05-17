@@ -21,9 +21,35 @@ export default function FAQ() {
         "El término dólar oficial se refiere al tipo de cambio establecido por el gobierno argentino y utilizado para transacciones oficiales. Por otro lado, el término dólar blue se utiliza para hacer referencia al mercado paralelo o informal del dólar, donde el tipo de cambio puede ser diferente al oficial debido a la demanda y oferta en ese mercado. La diferencia entre ambos tipos de cambio puede variar y está sujeta a cambios constantes. Es importante tener en cuenta que el uso del dólar blue puede estar sujeto a restricciones y riesgos adicionales.",
     },
     {
-      question: "Q3",
+      question: "¿Dónde puedo comprar dólares en Argentina?",
       answer:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, iste. Maiores, minima doloremque. Libero soluta perferendis quaerat voluptas odit natus accusantium voluptatem saepe!",
+        "Puedes comprar dólares en bancos, casas de cambio autorizadas y plataformas digitales especializadas.",
+    },
+    {
+      question: "¿Cómo puedo vender dólares en Argentina?",
+      answer:
+        "Puedes vender dólares en bancos y casas de cambio autorizadas presentando la documentación requerida.",
+    },
+    {
+      question: "¿Cómo se determina el valor del dólar en Argentina?",
+      answer:
+        "El valor del dólar en Argentina es determinado principalmente por la oferta y la demanda en el mercado cambiario.",
+    },
+    {
+      question: "¿Cómo afecta la cotización del dólar a la economía argentina?",
+      answer:
+        "La cotización del dólar puede afectar la economía argentina de diversas formas, incluyendo la inflación, las importaciones y exportaciones, la deuda externa y el nivel de inversión extranjera.",
+    },
+    {
+      question:
+        "¿Cuáles son las restricciones para comprar dólares en Argentina?",
+      answer:
+        "En Argentina existen regulaciones cambiarias que imponen límites y requisitos para la compra de dólares, como la presentación de documentación y restricciones en la cantidad de dólares que se pueden adquirir.",
+    },
+    {
+      question: "¿Es legal tener dólares en Argentina?",
+      answer:
+        "Sí, es legal tener dólares en Argentina. Sin embargo, es importante cumplir con las regulaciones cambiarias vigentes y declarar la tenencia de dólares en determinadas situaciones, como al ingresar o salir del país con una cantidad específica.",
     },
   ];
 

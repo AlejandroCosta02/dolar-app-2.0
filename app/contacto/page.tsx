@@ -44,7 +44,7 @@ function ContactForm() {
           Contacto
         </h3>
       </div>
-      <form onSubmit={handleSubmit} className="mx-12 pt-8">
+      <form onSubmit={handleSubmit} className="mx-12 pt-8 md:mx-60">
         <div className="grid grid-cols-1 gap-2">
           <label htmlFor="full-name" className="text-gray-700 font-semibold">
             Nombre completo
