@@ -1,5 +1,6 @@
 import Link from "next/link";
 import DonationBtn from "./DonationBtn";
+import { RxDividerVertical } from "react-icons/rx";
 
 function Footer() {
   return (
@@ -14,13 +15,22 @@ function Footer() {
                   Términos y condiciones
                 </Link>
               </li>
+              <li className="inline-block ">
+                <RxDividerVertical className="inline-block w-4 h-4 text-white" />
+              </li>
               <li className="inline-block mx-2">
                 <Link href="/privacidad">Políticas de privacidad</Link>
+              </li>
+              <li className="inline-block ">
+                <RxDividerVertical className="inline-block w-4 h-4 text-white" />
               </li>
               <li className="inline-block mx-2">
                 <Link href="/contacto">Contacto</Link>
               </li>
-              <li>
+              <li className="inline-block ">
+                <RxDividerVertical className="inline-block w-4 h-4 text-white" />
+              </li>
+              <li className="inline-block mx-2">
                 <DonationBtn />
               </li>
             </ul>
