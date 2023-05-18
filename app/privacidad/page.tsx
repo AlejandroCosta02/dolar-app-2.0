@@ -67,6 +67,7 @@ function Privacidad() {
           Si tiene alguna pregunta acerca de esta política de privacidad, puede
           contactarnos a través de nuestro formulario de contacto.
         </p>
+        <span id="ezoic-privacy-policy-embed"></span>
       </div>
     </>
   );
