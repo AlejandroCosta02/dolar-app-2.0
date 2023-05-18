@@ -5,6 +5,7 @@ import { BiMailSend } from "react-icons/bi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MessageSent from "../components/MessageSent";
+import DonationBtn from "../components/DonationBtn";
 function ContactForm() {
   const notify = () =>
     toast.success("Mensaje Enviado Correctamente", {
@@ -95,6 +96,7 @@ function ContactForm() {
             <BiMailSend className="w-8 h-8 inline-block mr-2" />
             Submit
           </button>
+          <DonationBtn />
         </div>
       </form>
     </>

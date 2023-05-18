@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DonationBtn from "./DonationBtn";
 
 function Footer() {
   return (
@@ -18,6 +19,9 @@ function Footer() {
               </li>
               <li className="inline-block mx-2">
                 <Link href="/contacto">Contacto</Link>
+              </li>
+              <li>
+                <DonationBtn />
               </li>
             </ul>
           </div>
