@@ -42,6 +42,10 @@ export default function RootLayout({
               };
               document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplaynetwork.com/9e2de510e220d13593268cac379b7040/invoke.js"></scr' + 'ipt>')`}
           </Script>
+          <Script
+            type="text/javascript"
+            src="//pl19445898.highrevenuegate.com/74/38/71/743871627cce97cfc150702d9b2a4f22.js"
+          ></Script>
         </Head>
         <body className={`${raleway.className} dark:bg-white`}>
           <Navbar />
