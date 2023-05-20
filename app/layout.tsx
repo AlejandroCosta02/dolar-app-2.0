@@ -10,6 +10,7 @@ const raleway = Raleway({
 import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 import Script from "next/script";
 import Head from "next/head";
+import Banner from "./components/Ads/Banner";
 
 export const metadata = {
   title: "Precio Dolar Arg",
@@ -30,30 +31,13 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <Head>
-          <Script type="text/javascript">
-            {` 
-            const atOptions = {
-                'key': '9e2de510e220d13593268cac379b7040',
-                'format': 'iframe',
-                'height': 90,
-                'width': 728,
-                'params': {}
-              };
-              document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplaynetwork.com/9e2de510e220d13593268cac379b7040/invoke.js"></scr' + 'ipt>')`}
-          </Script>
-          <Script
-            type="text/javascript"
-            src="//pl19445898.highrevenuegate.com/74/38/71/743871627cce97cfc150702d9b2a4f22.js"
-          ></Script>
-        </Head>
         <body className={`${raleway.className} dark:bg-white`}>
           <Navbar />
           <div className="min-h-screen flex flex-col">
             <main className="flx-grow">{children}</main>
           </div>
+          <Banner />
           <Footer />
-
           {/* START SCRIPT */}
           <script
             type="module"
@@ -65,7 +49,10 @@ export default function RootLayout({
           ></script>
           <GoogleAnalytics measurementId="G-0FL3YES4FQ" />
           {/* ADS */}
-
+          <script
+            type="text/javascript"
+            src="//pl19445898.highrevenuegate.com/74/38/71/743871627cce97cfc150702d9b2a4f22.js"
+          ></script>
           {/* END SCRIPT */}
         </body>
       </html>
