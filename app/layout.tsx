@@ -46,10 +46,7 @@ export default function RootLayout({
           ></script>
           <GoogleAnalytics measurementId="G-0FL3YES4FQ" />
           {/* ADS */}
-          <script
-            type="text/javascript"
-            src="//pl19445898.highrevenuegate.com/74/38/71/743871627cce97cfc150702d9b2a4f22.js"
-          ></script>
+
           {/* END SCRIPT */}
         </body>
       </html>

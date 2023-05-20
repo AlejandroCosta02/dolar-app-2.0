@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MessageSent from "../components/MessageSent";
 import DonationBtn from "../components/DonationBtn";
+import AdsDisplay from "../components/Ads/AdsDisplay";
 function ContactForm() {
   const notify = () =>
     toast.success("Mensaje Enviado Correctamente", {
@@ -99,6 +100,9 @@ function ContactForm() {
           <DonationBtn />
         </div>
       </form>
+      <div className="flex flex-col mx-auto items-center py-8">
+        <AdsDisplay />
+      </div>
     </>
   );
 }

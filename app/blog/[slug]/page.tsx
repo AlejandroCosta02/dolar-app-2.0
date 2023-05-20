@@ -91,8 +91,8 @@ async function Post({ params }: { params: { slug: string } }) {
             className="object-cover rounded-lg h-full w-full"
           />
         </div>
-        <div className="flex flex-col mx-auto items-center mb-1">
-          <NativeBanner />
+        <div className="flex flex-col mx-auto items-center py-8 md:hidden">
+          <AdsDisplay />
         </div>
         <div className="w-full lg:w-2/3 p-4 text-justify">
           {post?.createdAt && (
@@ -119,7 +119,7 @@ async function Post({ params }: { params: { slug: string } }) {
           />
         </div>
       </div>
-      <div className="flex flex-col mx-auto items-center mb-1 bg-white rounded-lg shadow-lg">
+      <div className=" flex-col mx-auto items-center mb-1 bg-white rounded-lg shadow-lg hidden md:flex">
         <AdsDisplay />
       </div>
     </>

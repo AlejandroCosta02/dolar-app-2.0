@@ -1,3 +1,4 @@
+import AdsDisplay from "../components/Ads/AdsDisplay";
 import EachPost from "./components/EachPost";
 import HeroBlog from "./components/HeroBlog";
 import { PrismaClient } from "@prisma/client";
@@ -30,6 +31,9 @@ async function Blog() {
   return (
     <>
       <HeroBlog />
+      <div className="flex flex-col mx-auto items-center py-8">
+        <AdsDisplay />
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-12">
         {post.map((post) => (
           <EachPost post={post} />
