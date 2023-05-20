@@ -37,11 +37,13 @@ async function DB_Compra() {
 
           <Conversion_2 dolarblue={parseFloat(dolarblue_compra)} />
         </div>
-        <div className="col-span-12 md:col-span-2"></div>
+        <div className="col-span-12 md:col-span-2">
+          <AdsDisplay />
+        </div>
       </div>
-      <div className="flex flex-col mx-auto items-center py-3">
+      {/* <div className="flex flex-col mx-auto items-center py-3">
         <AdsDisplay />
-      </div>
+      </div> */}
     </>
   );
 }
