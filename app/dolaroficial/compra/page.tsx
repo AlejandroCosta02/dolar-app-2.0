@@ -33,7 +33,7 @@ async function dolarOficialVenta() {
         </div>
         <div className="col-span-12 md:col-span-2"></div>
       </div>
-      <div className="flex flex-col mx-auto items-center my-3">
+      <div className="flex flex-col mx-auto items-center">
         <AdsDisplay />
       </div>
     </>
