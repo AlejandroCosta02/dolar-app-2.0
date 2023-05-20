@@ -1,3 +1,4 @@
+import AdsDisplay from "@/app/components/Ads/AdsDisplay";
 import Conversion_2 from "@/app/components/Conversion_2";
 import NavDolar from "@/app/components/NavDolar";
 import {
@@ -31,6 +32,9 @@ async function dolarOficialVenta() {
           <Conversion_2 dolarblue={parseFloat(dolaroficial_venta)} />
         </div>
         <div className="col-span-12 md:col-span-2"></div>
+      </div>
+      <div className="flex flex-col mx-auto items-center my-3">
+        <AdsDisplay />
       </div>
     </>
   );

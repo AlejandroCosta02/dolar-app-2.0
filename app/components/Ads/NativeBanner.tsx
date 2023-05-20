@@ -5,10 +5,10 @@ export default function NativeBanner(): JSX.Element {
   const banner = useRef<HTMLDivElement>(null);
 
   const atOptions = {
-    key: "6b05f266697f202c91c0180d28fa19a9",
+    key: "ee868c39a310de5e6146c48562b216d7",
     format: "iframe",
-    height: 50,
-    width: 320,
+    height: 250,
+    width: 300,
     params: {},
   };
 
@@ -17,7 +17,7 @@ export default function NativeBanner(): JSX.Element {
       const conf = document.createElement("script");
       const script = document.createElement("script");
       script.type = "text/javascript";
-      script.src = `//pl19448841.highrevenuegate.com/${atOptions.key}/invoke.js`;
+      script.src = `//www.profitabledisplaynetwork.com/${atOptions.key}/invoke.js`;
       conf.innerHTML = `atOptions = ${JSON.stringify(atOptions)}`;
 
       banner.current.appendChild(conf);

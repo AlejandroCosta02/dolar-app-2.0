@@ -118,9 +118,9 @@ async function Post({ params }: { params: { slug: string } }) {
             image={`${post?.image}`}
           />
         </div>
-        <div className="flex flex-col mx-auto items-center mb-1">
-          <AdsDisplay />
-        </div>
+      </div>
+      <div className="flex flex-col mx-auto items-center mb-1 bg-white rounded-lg shadow-lg">
+        <AdsDisplay />
       </div>
     </>
   );
