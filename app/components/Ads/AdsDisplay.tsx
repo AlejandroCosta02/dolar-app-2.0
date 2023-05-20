@@ -26,7 +26,7 @@ export default function AdsDisplay(): JSX.Element {
     };
   }, []);
 
-  const isMobile = typeof window !== "undefined" && windowSize.width < 768;
+  const isMobile = typeof window !== "undefined" && windowSize.width < 640;
 
   return (
     <>

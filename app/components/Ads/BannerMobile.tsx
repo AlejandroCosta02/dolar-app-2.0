@@ -5,10 +5,10 @@ export default function BannerMobile(): JSX.Element {
   const banner = useRef<HTMLDivElement>(null);
 
   const atOptions = {
-    key: "6b05f266697f202c91c0180d28fa19a9",
+    key: "6e92e211818fe85acd7dcc8f21a591ab",
     format: "iframe",
-    height: 320,
-    width: 50,
+    height: 60,
+    width: 468,
     params: {},
   };
 
@@ -17,7 +17,7 @@ export default function BannerMobile(): JSX.Element {
       const conf = document.createElement("script");
       const script = document.createElement("script");
       script.type = "text/javascript";
-      script.src = `//www.highperformancedformats.com/${atOptions.key}/invoke.js`;
+      script.src = `//www.profitabledisplaynetwork.com/${atOptions.key}/invoke.js`;
       conf.innerHTML = `atOptions = ${JSON.stringify(atOptions)}`;
 
       banner.current.appendChild(conf);
@@ -25,5 +25,5 @@ export default function BannerMobile(): JSX.Element {
     }
   }, [banner]);
 
-  return <div className="bg-green-400" ref={banner}></div>;
+  return <div className="" ref={banner}></div>;
 }

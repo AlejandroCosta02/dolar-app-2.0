@@ -14,7 +14,7 @@ const Home = async () => {
         </div>
         <div className="col-span-12 md:col-span-2 "></div>
         <div className="col-span-12 mx-auto items-center mb-1">
-          <AdsDisplay />
+          {/* <AdsDisplay /> */}
         </div>
       </div>
     </>
