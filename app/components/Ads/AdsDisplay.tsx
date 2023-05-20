@@ -1,4 +1,3 @@
-"use client";
 import { useEffect, useState } from "react";
 import BannerMobile from "./BannerMobile";
 import Banner from "./Banner";
@@ -7,25 +6,26 @@ interface WindowSize {
   width: number;
 }
 
-function AdsDisplay() {
+export default function AdsDisplay(): JSX.Element {
   const [windowSize, setWindowSize] = useState<WindowSize>({
-    width: window.innerWidth,
+    width: 0,
   });
 
   useEffect(() => {
-    // Update windowSize state when the window is resized
     const handleResize = () => {
       setWindowSize({ width: window.innerWidth });
     };
 
+    // Add event listener when the component mounts
     window.addEventListener("resize", handleResize);
 
+    // Remove event listener when the component unmounts
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  const isMobile = windowSize.width < 768;
+  const isMobile = typeof window !== "undefined" && windowSize.width < 768;
 
   return (
     <>
@@ -33,5 +33,3 @@ function AdsDisplay() {
     </>
   );
 }
-
-export default AdsDisplay;
