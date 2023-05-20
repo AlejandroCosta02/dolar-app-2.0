@@ -32,7 +32,7 @@ export default function RootLayout({
         <body className={`${raleway.className} dark:bg-white`}>
           <Navbar />
           <div className="min-h-screen flex flex-col">
-            <main className="flx-grow">{children}</main>
+            <main className="flex-grow">{children}</main>
           </div>
           {/* <div className="flex flex-col mx-auto items-center mb-1">
             <AdsDisplay />
