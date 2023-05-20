@@ -39,7 +39,7 @@ async function DB_Compra() {
         </div>
         <div className="col-span-12 md:col-span-2"></div>
       </div>
-      <div className="flex flex-col mx-auto items-center flex-grow">
+      <div className="flex flex-col mx-auto items-center pb-8">
         <AdsDisplay />
       </div>
     </>
