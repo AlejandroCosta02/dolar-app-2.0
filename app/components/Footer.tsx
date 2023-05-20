@@ -5,7 +5,7 @@ import { RxDividerVertical } from "react-icons/rx";
 function Footer() {
   return (
     <>
-      <footer className="mt-auto bg-gray-900 text-gray-400 py-4 flex-grow">
+      <footer className="mt-auto bg-gray-900 text-gray-400 py-5 flex-grow">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between items-center">
             <p className="text-sm">Copyright © 2023</p>
