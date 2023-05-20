@@ -34,9 +34,6 @@ export default function RootLayout({
           <div className="min-h-screen flex flex-col">
             <main className="flex-grow">{children}</main>
           </div>
-          {/* <div className="flex flex-col mx-auto items-center mb-1">
-            <AdsDisplay />
-          </div> */}
           <Footer />
           {/* START SCRIPT */}
           <script
