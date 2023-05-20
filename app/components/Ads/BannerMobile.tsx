@@ -5,10 +5,10 @@ export default function BannerMobile(): JSX.Element {
   const banner = useRef<HTMLDivElement>(null);
 
   const atOptions = {
-    key: "6e92e211818fe85acd7dcc8f21a591ab",
+    key: "7b64bd35be3181e591d13fd0d897b511",
     format: "iframe",
-    height: 60,
-    width: 468,
+    height: 50,
+    width: 320,
     params: {},
   };
 
