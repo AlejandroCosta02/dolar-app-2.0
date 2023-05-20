@@ -1,3 +1,4 @@
+import AdsDisplay from "@/app/components/Ads/AdsDisplay";
 import ConverionVenta from "@/app/components/ConversionVenta";
 import {
   dolar_turista_nombre,
@@ -25,6 +26,9 @@ async function DT_Venta() {
           <ConverionVenta dolarValue={parseFloat(dolarturista_venta)} />
         </div>
         <div className="col-span-12 md:col-span-2"></div>
+      </div>
+      <div className="flex flex-col mx-auto items-center ">
+        <AdsDisplay />
       </div>
     </>
   );

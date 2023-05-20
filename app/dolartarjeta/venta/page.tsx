@@ -1,3 +1,4 @@
+import AdsDisplay from "@/app/components/Ads/AdsDisplay";
 import ConverionVenta from "@/app/components/ConversionVenta";
 import { dolar_oficial_venta } from "@/app/components/NewApi";
 import IndexPage from "@/app/components/sideNavBar/IndexPage";
@@ -24,6 +25,9 @@ async function DTarjeta_Venta() {
           <ConverionVenta dolarValue={newDolarTarjetaVenta} />
         </div>
         <div className="col-span-12 md:col-span-2"></div>
+      </div>
+      <div className="flex flex-col mx-auto items-center ">
+        <AdsDisplay />
       </div>
     </>
   );
