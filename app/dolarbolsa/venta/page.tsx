@@ -1,5 +1,3 @@
-import AdsComponent from "@/app/components/Ads/AdsComponent";
-import AdsComponentHorizontal from "@/app/components/Ads/AdsComponentHorizontal";
 import Conversion_2 from "@/app/components/Conversion_2";
 import NavDolar from "@/app/components/NavDolar";
 import { dolar_bolsa_venta, dolar_bolsa_nombre } from "@/app/components/NewApi";
@@ -20,9 +18,7 @@ async function BB_Venta() {
         <IndexPage />
       </div>
       <div className="grid grid-cols-12 gap-2">
-        <div className="col-span-12 md:col-span-2">
-          <AdsComponent />
-        </div>
+        <div className="col-span-12 md:col-span-2"></div>
         <div className="col-span-12 md:col-span-8">
           <p className="text-center text-5xl text-bold my-11">
             ${dolarBolsa_venta}
@@ -31,11 +27,8 @@ async function BB_Venta() {
 
           <Conversion_2 dolarblue={parseFloat(dolarBolsa_venta)} />
         </div>
-        <div className="col-span-12 md:col-span-2">
-          <AdsComponent />
-        </div>
+        <div className="col-span-12 md:col-span-2"></div>
       </div>
-      <AdsComponentHorizontal />
     </>
   );
 }

@@ -8,9 +8,7 @@ const raleway = Raleway({
   subsets: ["latin"],
 });
 import GoogleAnalytics from "@bradgarropy/next-google-analytics";
-import Script from "next/script";
-import Head from "next/head";
-import Banner from "./components/Ads/Banner";
+import AdsDisplay from "./components/Ads/AdsDisplay";
 
 export const metadata = {
   title: "Precio Dolar Arg",
@@ -36,7 +34,6 @@ export default function RootLayout({
           <div className="min-h-screen flex flex-col">
             <main className="flx-grow">{children}</main>
           </div>
-          <Banner />
           <Footer />
           {/* START SCRIPT */}
           <script

@@ -1,4 +1,3 @@
-import AdsArticle from "@/app/components/Ads/AdsArticle";
 import ShareButton from "@/app/components/ShareButton";
 import { PrismaClient } from "@prisma/client";
 import { format } from "date-fns";
@@ -98,7 +97,6 @@ async function Post({ params }: { params: { slug: string } }) {
               })}
             </p>
           )}
-          <AdsArticle />
           <p
             className="mb-4 text-2xl sm:text-lg dark:text-black"
             dangerouslySetInnerHTML={{ __html: formatText(post?.body) }}
@@ -114,7 +112,6 @@ async function Post({ params }: { params: { slug: string } }) {
             description={`${post?.description}`}
             image={`${post?.image}`}
           />
-          <AdsArticle />
         </div>
       </div>
     </>

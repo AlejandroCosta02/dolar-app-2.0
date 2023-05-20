@@ -1,14 +1,14 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-export default function Banner(): JSX.Element {
+export default function BannerMobile(): JSX.Element {
   const banner = useRef<HTMLDivElement>(null);
 
   const atOptions = {
-    key: "9e2de510e220d13593268cac379b7040",
+    key: "6b05f266697f202c91c0180d28fa19a9",
     format: "iframe",
-    height: 50,
-    width: 320,
+    height: 320,
+    width: 50,
     params: {},
   };
 
@@ -25,5 +25,5 @@ export default function Banner(): JSX.Element {
     }
   }, [banner]);
 
-  return <div className="" ref={banner}></div>;
+  return <div className="bg-green-400" ref={banner}></div>;
 }

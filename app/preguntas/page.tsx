@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
-import AdsComponentHorizontal from "../components/Ads/AdsComponentHorizontal";
 
 export default function FAQ() {
   const [openQuestionIndex, setOpenQuestionIndex] = useState<number | null>(
@@ -61,7 +60,6 @@ export default function FAQ() {
             Preguntas Frecuentes
           </h3>
         </div>
-        <AdsComponentHorizontal />
         {questions.map((q, i) => (
           <div key={i} className="max-w-2xl mx-auto pt-5 px-12">
             <button
@@ -87,7 +85,6 @@ export default function FAQ() {
           </div>
         ))}
       </div>
-      <AdsComponentHorizontal />
     </>
   );
 }

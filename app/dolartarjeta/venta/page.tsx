@@ -1,4 +1,3 @@
-import AdsComponent from "@/app/components/Ads/AdsComponent";
 import ConverionVenta from "@/app/components/ConversionVenta";
 import { dolar_oficial_venta } from "@/app/components/NewApi";
 import IndexPage from "@/app/components/sideNavBar/IndexPage";
@@ -17,18 +16,14 @@ async function DTarjeta_Venta() {
         <IndexPage />
       </div>
       <div className="grid grid-cols-12 gap-2">
-        <div className="col-span-12 md:col-span-2">
-          <AdsComponent />
-        </div>
+        <div className="col-span-12 md:col-span-2"></div>
         <div className="col-span-12 md:col-span-8">
           <p className="text-center text-5xl text-bold my-11">
             ${newDolarTarjetaVenta}
           </p>
           <ConverionVenta dolarValue={newDolarTarjetaVenta} />
         </div>
-        <div className="col-span-12 md:col-span-2">
-          <AdsComponent />
-        </div>
+        <div className="col-span-12 md:col-span-2"></div>
       </div>
     </>
   );

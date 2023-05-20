@@ -1,4 +1,3 @@
-import AdsArticle from "../components/Ads/AdsArticle";
 import EachPost from "./components/EachPost";
 import HeroBlog from "./components/HeroBlog";
 import { PrismaClient } from "@prisma/client";
@@ -37,7 +36,6 @@ async function Blog() {
         ))}
       </div>
       {/* <EachPost /> */}
-      <AdsArticle />
     </>
   );
 }
